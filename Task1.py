@@ -13,6 +13,4 @@ def driver(request):
 
 def test_example(driver):
     driver.get("https://www.google.com/")
-    # driver.find_element_by_name("q").send_keys("web").send_keys("Return")
-    # driver.find_element_by_name("btnG").click()
-    WebDriverWait(driver, 10).until(EC.title_is("Selenium WebDriver"))
+
