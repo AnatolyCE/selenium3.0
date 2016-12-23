@@ -4,14 +4,14 @@ from selenium import webdriver
 
 @pytest.fixture
 def driver(request):
-    # wd = webdriver.Chrome()
+    wd = webdriver.Chrome()
     # wd = webdriver.Firefox()
     # wd = webdriver.Edge() # works for some function
-    wd = webdriver.Ie("C:\Selenium\Drivers\IEDriverServer.exe",
-                      capabilities={"unexpectedAlertBehaviour": "dismiss", "requireWindowFocus": True,
-                                    "ignoreZoomSetting": True,
-                                    "ignoreProtectedModeSettings": True})
-    print(wd.capabilities)
+    # wd = webdriver.Ie("C:\Selenium\Drivers\IEDriverServer.exe",
+    #                   capabilities={"unexpectedAlertBehaviour": "dismiss", "requireWindowFocus": True,
+    #                                 "ignoreZoomSetting": True,
+    #                                 "ignoreProtectedModeSettings": True})
+    # print(wd.capabilities)
     request.addfinalizer(wd.quit)
     return wd
 
